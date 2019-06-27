@@ -56,6 +56,11 @@ module.exports = function(environment) {
         }
       },
     ],
+
+    bugsnag: {
+      apiKey: '94069bddc8658172f92a74e80660fa3a',
+      notifyReleaseStages: ['development', 'production']
+    }
   };
 
   if (environment === 'development') {

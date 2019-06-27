@@ -5,6 +5,17 @@ import { get } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { scheduleOnce } from '@ember/runloop';
 
+// eslint-disable-next-line no-undef
+Ember.onerror = function(error) {
+  console.log('errroror', error);
+}
+
+// eslint-disable-next-line no-undef
+Ember.Logger.error = function (message, cause, stack) {
+  // If you want to send to Raygun in addition to console logging:
+  console.log('errroror', message, cause, stack);
+}
+
 const Router = EmberRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL,
