@@ -77,7 +77,7 @@ import { helper } from "@ember/component/helper";
 
 function substring(args) {
   let [string, start, length] = args;
-  return string.substr(start, length);
+  return string.substring(start, length);
 }
 
 export default helper(substring);
@@ -91,7 +91,7 @@ import { helper } from "@ember/component/helper";
 function substring([string, start, length]) {
 function substring(args) {
   let [string, start, length] = args;
-  return string.substr(start, length);
+  return string.substring(start, length);
 }
 
 export default helper(substring);
